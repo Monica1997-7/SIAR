@@ -259,3 +259,159 @@ Prioridad: Media
 RF asociado: RF06  
 
 Estimación: 6 horas 
+
+# Historias de Usuario (Módulo Menú)
+
+## HU08 - Registrar producto
+
+Como administrador  
+Quiero registrar nuevos productos en el menú  
+Para que estén disponibles para ser agregados a los pedidos
+
+**Criterios de aceptación:**
+
+- El formulario solicita: nombre, descripción (opcional), precio y categoría
+- El nombre del producto debe ser único en el sistema
+- El precio debe ser un valor numérico mayor que cero
+- La categoría se selecciona de la lista de categorías existentes
+- El producto se registra por defecto como disponible
+- El sistema confirma el registro exitoso
+- Si faltan datos obligatorios o son inválidos, el sistema muestra un error
+
+**Prioridad:** Alta  
+**RF asociado:** RF07  
+**Estimación:** 6 horas
+
+## HU09 - Editar producto
+
+Como administrador  
+Quiero modificar los datos de un producto existente  
+Para mantener el menú actualizado (precios, nombres y categorías)
+
+**Criterios de aceptación:**
+
+- El sistema muestra la lista de productos registrados
+- Se puede seleccionar un producto para editar
+- Se pueden modificar: nombre, descripción, precio y categoría
+- Si se cambia el nombre, debe validarse que no exista otro producto igual
+- El sistema valida la información modificada antes de guardar
+- Los cambios de precio no alteran los pedidos ya facturados
+- El sistema confirma la actualización exitosa
+
+**Prioridad:** Alta  
+**RF asociado:** RF08  
+**Estimación:** 5 horas
+
+## HU10 - Eliminar producto
+
+Como administrador  
+Quiero eliminar productos del menú  
+Para retirar los platos o bebidas que el restaurante ya no ofrece
+
+**Criterios de aceptación:**
+
+- El sistema muestra la lista de productos registrados
+- Se puede seleccionar un producto para eliminar
+- El sistema pide confirmación antes de eliminar
+- Si el producto tiene pedidos asociados, se desactiva en lugar de eliminarse
+- El producto eliminado o desactivado deja de aparecer en el menú
+- El sistema confirma la eliminación exitosa
+
+**Prioridad:** Media  
+**RF asociado:** RF09  
+**Estimación:** 4 horas
+
+## HU11 - Gestionar categorías
+
+Como administrador  
+Quiero crear y administrar las categorías del menú  
+Para organizar los productos (entradas, platos fuertes, bebidas, postres)
+
+**Criterios de aceptación:**
+
+- El sistema permite crear categorías nuevas
+- Cada categoría tiene un nombre único
+- Se pueden asignar productos a una categoría
+- Se puede modificar el nombre y la descripción de una categoría
+- No se puede eliminar una categoría que tenga productos asociados
+- El sistema confirma cada operación exitosa
+
+**Prioridad:** Media  
+**RF asociado:** RF10  
+**Estimación:** 6 horas
+
+## HU12 - Cambiar disponibilidad del producto
+
+Como administrador  
+Quiero marcar un producto como disponible o no disponible  
+Para evitar que los meseros ofrezcan productos agotados durante el servicio
+
+**Criterios de aceptación:**
+
+- El sistema permite seleccionar un producto de la lista
+- El estado de disponibilidad puede ser: disponible o no disponible
+- El cambio se guarda en la base de datos
+- El cambio se refleja de inmediato en el menú
+- Un producto no disponible no puede agregarse a un pedido (RF18)
+- El sistema confirma el cambio exitoso
+
+**Prioridad:** Alta  
+**RF asociado:** RF11  
+**Estimación:** 4 horas
+
+
+# Historias de Usuario (Módulo Pedidos)
+
+## HU13 - Crear pedido
+
+Como mesero  
+Quiero seleccionar una mesa y crear un pedido agregando los productos solicitados por el cliente  
+Para registrar el consumo y enviarlo a cocina de forma organizada
+
+**RF asociado:** RF17  
+**Estimación:** 8 horas
+
+## HU14 - Agregar productos a un pedido existente
+
+Como mesero  
+Quiero agregar productos a un pedido ya creado  
+Para atender solicitudes adicionales del cliente sin tener que generar un nuevo pedido
+
+**RF asociado:** RF18  
+**Estimación:** 5 horas
+
+## HU15 - Modificar pedido
+
+Como mesero  
+Quiero modificar las cantidades o productos de un pedido  
+Para corregir errores o cambios solicitados por el cliente antes de que sea facturado
+
+**RF asociado:** RF19  
+**Estimación:** 6 horas
+
+## HU16 - Cancelar pedido
+
+Como mesero o administrador  
+Quiero cancelar un pedido que aún no ha sido facturado  
+Para liberar la mesa y corregir errores de registro
+
+**RF asociado:** RF20  
+**Estimación:** 4 horas
+
+## HU17 - Enviar pedido a cocina
+
+Como mesero  
+Quiero confirmar y enviar el pedido a cocina  
+Para que el cocinero reciba la notificación y comience la preparación de los productos
+
+**RF asociado:** RF21  
+**Estimación:** 6 horas
+
+## HU18 - Consultar estado del pedido
+
+Como mesero, cocinero o cajero  
+Quiero consultar el estado actual de un pedido  
+Para dar seguimiento a su progreso desde que se crea hasta que se factura
+
+**RF asociado:** RF22  
+**Estimación:** 5 horas
