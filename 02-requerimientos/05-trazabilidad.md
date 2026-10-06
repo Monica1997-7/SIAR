@@ -10,17 +10,17 @@
 | RF04 | Gestionar roles | HU-04, HU-05 | CU-04, CU-05 | Usuarios | Monica Ortiz | test_gestionar_roles |
 | RF05 | Iniciar sesión | HU-06 | CU-06 | Usuarios | Monica Ortiz | test_iniciar_sesion |
 | RF06 | Recuperar contraseña | HU-07 | CU-07 | Usuarios | Monica Ortiz | test_recuperar_password |
-| RF07 | Crear producto | HU-08 | CU-08 | Menú | Andrés Reyes | test_crear_producto |
-| RF08 | Modificar producto | HU-09 | CU-09 | Menú | Andrés Reyes | test_modificar_producto |
-| RF09 | Eliminar producto | HU-10 | CU-10 | Menú | Andrés Reyes | test_eliminar_producto |
-| RF10 | Categorizar productos | HU-11 | CU-11 | Menú | Andrés Reyes | test_categorizar_producto |
-| RF11 | Gestionar disponibilidad | HU-12 | CU-12 | Menú | Andrés Reyes | test_gestionar_disponibilidad |
-| RF17 | Crear pedido | HU-13 | CU-13 | Pedidos | Omar Rivera | test_crear_pedido |
-| RF18 | Agregar productos | HU-14 | CU-14 | Pedidos | Omar Rivera | test_agregar_productos |
-| RF19 | Modificar pedido | HU-15 | CU-15 | Pedidos | Omar Rivera | test_modificar_pedido |
-| RF20 | Cancelar pedido | HU-16 | CU-16 | Pedidos | Omar Rivera | test_cancelar_pedido |
-| RF21 | Enviar pedido a cocina | HU-17 | CU-17 | Pedidos | Omar Rivera | test_enviar_cocina |
-| RF22 | Consultar estado | HU-18 | CU-18 | Pedidos | Omar Rivera | test_consultar_estado |
+| RF07 | Registrar producto | HU-08 | CU-08 | Menú | Omar Rivera | test_registrar_producto |
+| RF08 | Editar producto | HU-09 | CU-09 | Menú | Omar Rivera | test_editar_producto |
+| RF09 | Eliminar producto | HU-10 | CU-10 | Menú | Omar Rivera | test_eliminar_producto |
+| RF10 | Gestionar categorías | HU-11 | CU-11 | Menú | Omar Rivera | test_gestionar_categorias |
+| RF11 | Cambiar disponibilidad | HU-12 | CU-12 | Menú | Omar Rivera | test_cambiar_disponibilidad |
+| RF17 | Crear pedido | HU-13 | CU-13 | Pedidos | Andrés Reyes | test_crear_pedido |
+| RF18 | Agregar productos a un pedido existente | HU-14 | CU-14 | Pedidos | Andrés Reyes | test_agregar_productos |
+| RF19 | Modificar pedido | HU-15 | CU-15 | Pedidos | Andrés Reyes | test_modificar_pedido |
+| RF20 | Cancelar pedido | HU-16 | CU-16 | Pedidos | Andrés Reyes | test_cancelar_pedido |
+| RF21 | Enviar pedido a cocina | HU-17 | CU-17 | Pedidos | Andrés Reyes | test_enviar_cocina |
+| RF22 | Consultar estado del pedido | HU-18 | CU-18 | Pedidos | Andrés Reyes | test_consultar_estado |
 
 ## Resumen por módulo
 
