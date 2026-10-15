@@ -21,8 +21,8 @@ inventario, facturación, reportes, reservas y dashboard.
 ## Autora
 
 **Mónica Ortiz Ossa**
-Ingeniería de Sistemas
-Institución Universitaria Antonio José Camacho
+- Ingeniería de Sistemas
+- Institución Universitaria Antonio José Camacho
 
 
 ## Docente
