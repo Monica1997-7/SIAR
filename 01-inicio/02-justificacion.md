@@ -68,19 +68,15 @@ lo que permite evaluar el progreso de forma objetiva.
 
 Económicamente, SIAR reduce las pérdidas que actualmente
 representan entre el 10% y el 15% de las ventas diarias. Al
-digitalizar los pedidos, el inventario y la facturación, se
-cometen menos errores humanos y se aprovechan mejor los
-insumos. El dueño obtiene reportes en tiempo real que le
-permiten tomar decisiones basadas en datos: saber qué platos
-se venden más, qué días hay menos clientes, y dónde se está
-perdiendo dinero.
+digitalizar los pedidos, el menú, el inventario y la
+facturación, se cometen menos errores humanos y se aprovechan
+mejor los insumos.
 
 Socialmente, el sistema mejora las condiciones laborales de
 los empleados. Los roles bien definidos eliminan la confusión
 de responsabilidades y reducen el estrés. Los meseros dejan
 de correr con libretas, los cocineros reciben pedidos claros,
-y los cajeros facturan sin errores. El resultado es un ambiente
-de trabajo más sano y un servicio más rápido para el cliente.
+y los cajeros facturan sin errores.
 
 Tecnológicamente, SIAR representa la digitalización de un
 negocio que operaba de forma manual. Esto genera datos

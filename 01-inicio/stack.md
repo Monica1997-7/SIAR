@@ -1,93 +1,99 @@
 # Stack Tecnológico — SIAR
 
 ## Lenguaje principal
-- **Java 21 (LTS)**
-- **Justificación:** Lenguaje fuertemente tipado, ideal para
-  aplicar patrones de diseño formales (Factory, Singleton,
-  Strategy, Observer, Repository). Amplia documentación y
-  soporte empresarial.
+- **TypeScript 5**
+- **Justificación:** Lenguaje tipado que se compila a JavaScript.
+  Permite detectar errores en tiempo de desarrollo y se integra
+  naturalmente con React y Node.js.
 
 ## Frontend
-- **Tecnología:** React 18 + Bootstrap 5
-- **Justificación:** React permite construir interfaces dinámicas
-  por componentes. Bootstrap 5 acelera el diseño responsivo (RNF01)
-  con componentes preconstruidos (tablas, formularios, navbar,
-  modales) sin necesidad de escribir CSS desde cero.
+- **Tecnología:** React 18 + TypeScript + Bootstrap 5
+- **Justificación:** React permite construir interfaces por
+  componentes. TypeScript añade tipado fuerte. Bootstrap 5
+  acelera el diseño responsivo (RNF01) con componentes
+  preconstruidos.
 
 ## Backend
-- **Tecnología:** Spring Boot 3 + Spring Web + Spring Security
-- **Justificación:**
-  - Spring Boot simplifica la configuración y el despliegue.
-  - Spring Web permite construir APIs REST con pocas líneas.
-  - Spring Security gestiona autenticación JWT y control de
-    acceso por roles (RF04, RF05, RNF04, RNF05).
+- **Tecnología:** Node.js 20 + Express 4 + TypeScript
+- **Justificación:** Node.js permite ejecutar TypeScript en el
+  servidor. Express es minimalista y permite construir APIs
+  REST con pocas líneas.
 - **Arquitectura:** MVC en capas (Controller → Service → Repository).
 
 ## Base de datos
 - **Tecnología:** PostgreSQL 15
-- **Justificación:** Soporta roles y permisos nativos (RF04),
-  transacciones ACID (útil para pedidos), y es gratuito.
+- **Justificación:** Base de datos relacional, gratuita y robusta.
+  Soporta roles y permisos nativos (RF04).
 
-## ORM / Persistencia
-- **Tecnología:** Spring Data JPA + Hibernate
-- **Justificación:** Mapea clases Java a tablas PostgreSQL,
-  permite migraciones versionadas con Flyway o Liquibase.
+## Conexión TypeScript ↔ PostgreSQL
+- **Tecnología:** Prisma o TypeORM
+- **Justificación:** ORM que permite mapear clases TypeScript a
+  tablas PostgreSQL sin escribir SQL manualmente.
+- **Nota:** se aprenderá durante el proyecto.
 
 ## Pruebas
-- **Framework:** JUnit 5 + Mockito + Spring Boot Test
+- **Framework:** Jest + Supertest
 - **Cobertura mínima:** 70% (RNF09)
-- **Herramienta de cobertura:** JaCoCo
+- **Nota:** se aprenderá durante el proyecto.
+
+## Gestor de dependencias
+- **Tecnología:** npm (o pnpm)
+- **Nota:** se aprenderá durante el proyecto.
 
 ## Documentación de API
-- **Tecnología:** Springdoc OpenAPI (Swagger UI)
-- **Justificación:** Genera documentación interactiva de los
-  endpoints automáticamente.
+- **Tecnología:** Swagger UI (con swagger-jsdoc)
+- **Nota:** se aprenderá durante el proyecto.
 
 ## Control de versiones
 - Git + GitHub (RNF08)
 
-## Gestor de dependencias
-- Maven 3.9
+## IDE
+- Visual Studio Code
 
 ## Despliegue
-- **Plataforma:** Railway o Render (soporte Java)
-- **Base de datos en la nube:** Neon (PostgreSQL gratuito)
-- **Justificación:** Capa gratuita suficiente para el proyecto.
-
-## IDE
-- **Visual Studio Code**
-- **Extensiones necesarias:**
-  - Extension Pack for Java (Microsoft)
-  - Spring Boot Extension Pack (VMware)
-  - Maven for Java
-  - Debugger for Java
-  - GitLens
-  - Markdown Preview Enhanced (para ver los .md)
+- **Frontend:** Vercel o Netlify
+- **Backend:** Render o Railway
+- **Base de datos:** Neon o Supabase (PostgreSQL gratuito)
+- **Nota:** se aprenderá en el corte 3.
 
 ## Resumen del stack
 
-| Capa | Tecnología |
-|------|-----------|
-| Lenguaje | Java 21 (LTS) |
-| Frontend | React 18 + Bootstrap 5 |
-| Backend | Spring Boot 3 + Spring Web + Spring Security |
-| BD | PostgreSQL 15 |
-| ORM | Spring Data JPA + Hibernate |
-| Pruebas | JUnit 5 + Mockito + JaCoCo |
-| API Docs | Springdoc OpenAPI (Swagger UI) |
-| Build | Maven 3.9 |
-| IDE | Visual Studio Code |
-| Despliegue | Railway / Render |
-| Versionamiento | Git + GitHub |
+| Capa | Tecnología | ¿Visto en clase? |
+|------|-----------|-------------------|
+| Lenguaje | TypeScript 5 |  Sí |
+| Frontend | React 18 + TS + Bootstrap 5 | Sí |
+| Backend | Node.js + Express + TS | Sí |
+| BD | PostgreSQL 15 | Sí |
+| Conexión | Prisma o TypeORM |  Por aprender |
+| Pruebas | Jest + Supertest |  Por aprender |
+| Build | npm |  Por aprender |
+| API Docs | Swagger UI |  Por aprender |
+| Despliegue | Vercel + Render |  Por aprender |
+| Versionamiento | Git + GitHub |  Sí |
+| IDE | VS Code |  Sí |
 
-## ¿Por qué este stack y no otro?
-- **Java + Spring Boot:** estándar empresarial, tipado fuerte,
-  ideal para patrones de diseño formales.
-- **Bootstrap 5:** fácil de aprender, componentes listos,
-  acelera el desarrollo del dashboard administrativo.
-- **JUnit + Mockito + JaCoCo:** permiten cumplir el RNF09
-  (cobertura ≥ 70%) con facilidad.
-- **PostgreSQL:** gratuito, robusto, soporta roles nativos
-  para el RF04.
-- **VS Code:** IDE ligero, multiplataforma, con extensiones
-  oficiales de Microsoft para Java y Spring Boot.
+## Módulos del proyecto
+
+| Corte | Módulos |
+|-------|---------|
+| 1 | Usuarios, Menú |
+| 2 | Pedidos, Inventario |
+| 3 | Facturación, Reservas |
+
+## ¿Por qué TypeScript y no Java?
+
+- **TypeScript es más rápido de aprender** si ya se conoce JavaScript.
+- **Un solo lenguaje** para frontend y backend (menos cambios de contexto).
+- **React + TypeScript** es un stack muy común en la industria.
+- **Node.js + Express** permite levantar un servidor en minutos.
+- **Vercel y Render** tienen capa gratuita generosa para desplegar.
+
+## Temas por aprender
+
+Durante el proyecto aprenderemos:
+
+- **React:** construcción de interfaces por componentes.
+- **Prisma o TypeORM:** conexión a PostgreSQL.
+- **Jest + Supertest:** pruebas automatizadas.
+- **Swagger UI:** documentación de la API.
+- **Vercel + Render:** despliegue en la nube.

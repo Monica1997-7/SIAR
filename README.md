@@ -4,38 +4,44 @@ Proyecto de semestre para la asignatura Ingeniería de Software.
 
 ## Descripción
 
-Aplicación web para gestionar integralmente la operación de un
-restaurante pequeño o mediano: usuarios, menú, pedidos, mesas,
-inventario, facturación, reportes, reservas y dashboard.
+Aplicación web para gestionar la operación de un restaurante
+pequeño o mediano: usuarios, menú, pedidos, inventario,
+facturación y reservas.
 
 ## Stack tecnológico
 
-- **Backend:** Java 21 + Spring Boot 3 + Spring Security
-- **Frontend:** React 18 + Bootstrap 5
+- **Lenguaje:** TypeScript
+- **Frontend:** React + Bootstrap 5
+- **Backend:** Node.js 20 + Express 4 + TypeScript
 - **Base de datos:** PostgreSQL 15
-- **ORM:** Spring Data JPA + Hibernate
-- **Pruebas:** JUnit 5 + Mockito + JaCoCo
-- **IDE:** Visual Studio Code
 - **Control de versiones:** Git + GitHub
+- **IDE:** Visual Studio Code
 
 ## Autora
 
 **Mónica Ortiz Ossa**
-- Ingeniería de Sistemas
-- Institución Universitaria Antonio José Camacho
+Ingeniería de Sistemas
+Institución Universitaria Antonio José Camacho
 
+## Alcance del proyecto
+
+| Corte | Módulos |
+|-------|---------|
+| 1 | Usuarios, Menú |
+| 2 | Pedidos, Inventario |
+| 3 | Facturación, Reservas |
+
+## Estructura del repositorio
+
+- `01-inicio/` — Documento de Inicio
+- `02-requerimientos/` — Ingeniería de Requerimientos
+- `03-modelado/` — Diagramas y diccionario
+- `db/` — Scripts SQL
 
 ## Docente
 
 Johanna Chala
 
-## Estructura del repositorio
+## Año
 
-- `01-inicio/` — Documento de Inicio (problema, justificación, objetivos, alcance, cronograma)
-- `02-requerimientos/` — Ingeniería de Requerimientos (historias, casos de uso, RF, RNF, trazabilidad)
-- `03-modelado/` — Diagramas de casos de uso, clases, MER y diccionario
-- `db/` — Scripts SQL
-
-## Estado del proyecto
-
-**Primer corte:** documentación completa (en progreso).
+2026
