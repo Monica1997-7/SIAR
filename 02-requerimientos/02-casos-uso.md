@@ -178,3 +178,127 @@
 
 **Excepciones:** Si el servicio de correo no responde, el sistema muestra "No se pudo enviar el correo. Intente más tarde".
 **RF asociado:** RF06
+
+## Módulo Menú
+
+### CU-08 — Crear producto
+
+**Actor principal:** Administrador
+**Actores secundarios:** Base de datos
+**Precondiciones:** El administrador ha iniciado sesión con rol Administrador
+**Postcondiciones:** El nuevo producto queda registrado y disponible en el menú
+
+**Flujo normal:**
+1. El administrador ingresa al módulo de gestión de menú.
+2. Selecciona la opción "Crear nuevo producto".
+3. El sistema muestra el formulario de creación.
+4. El administrador ingresa: nombre, precio, categoría y descripción.
+5. El administrador confirma la creación.
+6. El sistema valida que el nombre no esté registrado.
+7. El sistema valida que el precio sea mayor a 0.
+8. El sistema guarda el producto en la base de datos.
+9. El sistema muestra un mensaje de confirmación exitoso.
+
+**Flujos alternativos:**
+- 6a. El nombre ya existe → el sistema muestra "El producto ya está registrado".
+- 7a. El precio es menor o igual a 0 → el sistema muestra "El precio debe ser mayor a 0".
+
+**Excepciones:** Si la base de datos no responde, el sistema muestra "Error al conectar con la base de datos".
+**RF asociado:** RF07
+
+### CU-09 — Modificar producto
+
+**Actor principal:** Administrador
+**Actores secundarios:** Base de datos
+**Precondiciones:** El administrador ha iniciado sesión y existe al menos un producto
+**Postcondiciones:** Los datos del producto quedan actualizados
+
+**Flujo normal:**
+1. El administrador ingresa al módulo de gestión de menú.
+2. El sistema muestra la lista de productos.
+3. El administrador selecciona un producto.
+4. El sistema muestra el formulario con los datos actuales.
+5. El administrador modifica los campos deseados.
+6. El administrador confirma los cambios.
+7. El sistema valida que el nuevo nombre no esté en uso.
+8. El sistema actualiza los datos en la base de datos.
+9. El sistema muestra un mensaje de actualización exitosa.
+
+**Flujos alternativos:**
+- 7a. El nuevo nombre ya existe → el sistema muestra "El nombre ya está registrado por otro producto".
+- 6a. No se modificó ningún campo → el sistema muestra "No hay cambios para guardar".
+
+**Excepciones:** Si la base de datos no responde, el sistema muestra "Error al conectar con la base de datos".
+**RF asociado:** RF08
+
+### CU-10 — Eliminar producto
+
+**Actor principal:** Administrador
+**Actores secundarios:** Base de datos
+**Precondiciones:** El administrador ha iniciado sesión y existe al menos un producto
+**Postcondiciones:** El producto queda eliminado o desactivado
+
+**Flujo normal:**
+1. El administrador ingresa al módulo de gestión de menú.
+2. El sistema muestra la lista de productos.
+3. El administrador selecciona el producto que desea eliminar.
+4. El administrador solicita su eliminación.
+5. El sistema solicita confirmación.
+6. El administrador confirma la eliminación.
+7. El sistema verifica si el producto tiene pedidos asociados.
+8. Si no tiene, el sistema elimina el producto.
+9. El sistema muestra un mensaje de eliminación exitosa.
+
+**Flujos alternativos:**
+- 7a. El producto tiene pedidos asociados → el sistema lo desactiva y muestra "El producto fue desactivado porque tiene pedidos asociados".
+- 6a. El administrador cancela → el sistema no realiza cambios.
+
+**Excepciones:** Si la base de datos no responde, el sistema muestra "Error al conectar con la base de datos".
+**RF asociado:** RF09
+
+### CU-11 — Categorizar productos
+
+**Actor principal:** Administrador
+**Actores secundarios:** Base de datos
+**Precondiciones:** El administrador ha iniciado sesión
+**Postcondiciones:** Las categorías quedan creadas o modificadas
+
+**Flujo normal:**
+1. El administrador ingresa al módulo de gestión de menú.
+2. Selecciona la opción "Gestionar categorías".
+3. El sistema muestra la lista de categorías existentes.
+4. El administrador selecciona "Crear nueva categoría" o una existente.
+5. El administrador ingresa o modifica el nombre de la categoría.
+6. El administrador confirma la operación.
+7. El sistema valida que el nombre sea único.
+8. El sistema guarda la categoría en la base de datos.
+9. El sistema muestra un mensaje de confirmación exitoso.
+
+**Flujos alternativos:**
+- 7a. El nombre ya existe → el sistema muestra "La categoría ya existe".
+- 7b. Se intenta eliminar una categoría con productos → el sistema muestra "No se puede eliminar una categoría con productos asociados".
+
+**Excepciones:** Si la base de datos no responde, el sistema muestra "Error al conectar con la base de datos".
+**RF asociado:** RF10
+
+### CU-12 — Gestionar disponibilidad
+
+**Actor principal:** Administrador
+**Actores secundarios:** Base de datos
+**Precondiciones:** El administrador ha iniciado sesión y existe al menos un producto
+**Postcondiciones:** El estado de disponibilidad del producto queda actualizado
+
+**Flujo normal:**
+1. El administrador ingresa al módulo de gestión de menú.
+2. El sistema muestra la lista de productos con su estado actual.
+3. El administrador selecciona un producto.
+4. El administrador cambia el estado (disponible / no disponible).
+5. El administrador confirma el cambio.
+6. El sistema actualiza el estado en la base de datos.
+7. El sistema muestra un mensaje de confirmación exitoso.
+
+**Flujos alternativos:**
+- 4a. El administrador selecciona el mismo estado → el sistema muestra "El producto ya tiene ese estado".
+
+**Excepciones:** Si la base de datos no responde, el sistema muestra "Error al conectar con la base de datos".
+**RF asociado:** RF11

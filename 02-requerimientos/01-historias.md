@@ -259,3 +259,93 @@ Prioridad: Media
 RF asociado: RF06  
 
 Estimación: 6 horas 
+
+## Módulo Menú
+
+### HU-08 — Crear producto
+
+**Como** administrador
+**Quiero** crear nuevos productos en el menú
+**Para** ofrecerlos a los clientes y mantener actualizada la carta
+
+**Criterios de aceptación:**
+- [ ] El formulario solicita: nombre, precio, categoría y descripción
+- [ ] El nombre del producto debe ser único
+- [ ] El precio debe ser mayor a 0
+- [ ] Se asigna una categoría de la lista existente
+- [ ] El producto se crea con estado "disponible" por defecto
+- [ ] El sistema confirma la creación exitosa
+
+**Prioridad:** Alta
+**RF asociado:** RF07
+**Estimación:** 6 horas
+
+### HU-09 — Modificar producto
+
+**Como** administrador
+**Quiero** modificar los datos de un producto existente
+**Para** corregir errores o actualizar precios
+
+**Criterios de aceptación:**
+- [ ] El sistema muestra la lista de productos
+- [ ] Se puede seleccionar un producto para editar
+- [ ] Se pueden modificar: nombre, precio, categoría y descripción
+- [ ] El sistema valida que el nuevo nombre no exista
+- [ ] El sistema confirma la actualización exitosa
+- [ ] Los cambios quedan registrados en la base de datos
+
+**Prioridad:** Alta
+**RF asociado:** RF08
+**Estimación:** 5 horas
+
+### HU-10 — Eliminar producto
+
+**Como** administrador
+**Quiero** eliminar productos del menú
+**Para** retirar platos que ya no se ofrecen
+
+**Criterios de aceptación:**
+- [ ] El sistema muestra la lista de productos
+- [ ] Se puede seleccionar un producto para eliminar
+- [ ] El sistema pide confirmación antes de eliminar
+- [ ] Si el producto tiene pedidos asociados, se desactiva en lugar de eliminarse
+- [ ] El sistema confirma la eliminación exitosa
+
+**Prioridad:** Alta
+**RF asociado:** RF09
+**Estimación:** 4 horas
+
+### HU-11 — Categorizar productos
+
+**Como** administrador
+**Quiero** crear y administrar categorías de productos
+**Para** organizar el menú por tipos de platos
+
+**Criterios de aceptación:**
+- [ ] El sistema permite crear categorías nuevas
+- [ ] Cada categoría tiene un nombre único
+- [ ] Se pueden asignar productos a categorías
+- [ ] Se pueden modificar los nombres de las categorías
+- [ ] No se puede eliminar una categoría con productos asociados
+- [ ] El sistema confirma cada operación exitosa
+
+**Prioridad:** Alta
+**RF asociado:** RF10
+**Estimación:** 6 horas
+
+### HU-12 — Gestionar disponibilidad
+
+**Como** administrador
+**Quiero** cambiar el estado de disponibilidad de un producto
+**Para** indicar rápidamente qué platos están disponibles o agotados
+
+**Criterios de aceptación:**
+- [ ] El sistema muestra la lista de productos con su estado actual
+- [ ] Se puede cambiar el estado (disponible / no disponible)
+- [ ] El cambio se refleja inmediatamente en el menú
+- [ ] El sistema confirma el cambio exitoso
+- [ ] Los cambios quedan registrados en la base de datos
+
+**Prioridad:** Media
+**RF asociado:** RF11
+**Estimación:** 4 horas

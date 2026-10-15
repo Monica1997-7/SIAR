@@ -50,4 +50,4 @@ modelado durante el primer corte.
 El detalle completo por requerimiento funcional, caso de uso,
 rol/actor, flujo normal y horas estimadas se encuentra en:
 
-📎 [`cronograma-detallado.xlsx`](cronograma-detallado.xlsx)
+📎 [`Cronograma_SIAR.xlsx`](Cronograma_SIAR.xlsx)

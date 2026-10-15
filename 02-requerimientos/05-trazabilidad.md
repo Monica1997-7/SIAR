@@ -37,3 +37,13 @@
 - El RF04 tiene 2 HU y 2 CU porque cubre dos acciones: gestionar roles y asignar roles.
 - Los RF del 12 al 16 (Mesas) y del 23 al 37 (Inventario, Facturación, Reportes) corresponden a los cortes 2 y 3, por lo que no se incluyen en esta matriz del primer corte.
 - Las pruebas planificadas se implementarán en el tercer corte, cuando se desarrolle el código.
+
+## Módulo Menú
+
+| RF | Nombre | HU asociada | CU asociado | Módulo | Responsable | Prueba planificada |
+|----|--------|-------------|-------------|--------|-------------|---------------------|
+| RF07 | Crear producto | HU-08 | CU-08 | Menú | Mónica Ortiz | test_crear_producto |
+| RF08 | Modificar producto | HU-09 | CU-09 | Menú | Mónica Ortiz | test_modificar_producto |
+| RF09 | Eliminar producto | HU-10 | CU-10 | Menú | Mónica Ortiz | test_eliminar_producto |
+| RF10 | Categorizar productos | HU-11 | CU-11 | Menú | Mónica Ortiz | test_categorizar_producto |
+| RF11 | Gestionar disponibilidad | HU-12 | CU-12 | Menú | Mónica Ortiz | test_gestionar_disponibilidad |
