@@ -1,7 +1,5 @@
 -- ============================================
--- Script SQL — Proyecto SIAR
 -- Módulo Usuarios
--- Autor: Mónica Ortiz Ossa
 -- ============================================
 
 -- ============================================
@@ -42,3 +40,35 @@ INSERT INTO roles (nombre, permisos) VALUES
   ('Cajero', 'facturacion,pedidos'),
   ('Mesero', 'pedidos,mesas'),
   ('Cocinero', 'pedidos');
+
+  -- ============================================
+-- Módulo Menú
+-- ============================================
+
+-- Tabla categorias
+CREATE TABLE categorias (
+  id_categoria SERIAL PRIMARY KEY,
+  nombre VARCHAR(100) UNIQUE NOT NULL
+);
+
+-- Tabla productos
+CREATE TABLE productos (
+  id_producto SERIAL PRIMARY KEY,
+  nombre VARCHAR(150) UNIQUE NOT NULL,
+  precio DECIMAL(10,2) NOT NULL CHECK (precio > 0),
+  descripcion TEXT,
+  disponible BOOLEAN DEFAULT TRUE,
+  categoria_id INT REFERENCES categorias(id_categoria),
+  creado_en TIMESTAMP DEFAULT NOW()
+);
+
+-- Índices
+CREATE INDEX idx_productos_categoria ON productos(categoria_id);
+CREATE INDEX idx_productos_disponible ON productos(disponible);
+
+-- Datos iniciales de categorías
+INSERT INTO categorias (nombre) VALUES
+  ('Entradas'),
+  ('Platos fuertes'),
+  ('Postres'),
+  ('Bebidas');
