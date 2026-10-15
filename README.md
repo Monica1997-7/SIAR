@@ -20,8 +20,8 @@ facturación y reservas.
 ## Autora
 
 **Mónica Ortiz Ossa**
-Ingeniería de Sistemas
-Institución Universitaria Antonio José Camacho
+|Ingeniería de Sistemas|
+|Institución Universitaria Antonio José Camacho|
 
 ## Alcance del proyecto
 
