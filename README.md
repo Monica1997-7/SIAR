@@ -18,11 +18,12 @@ inventario, facturación, reportes, reservas y dashboard.
 - **IDE:** Visual Studio Code
 - **Control de versiones:** Git + GitHub
 
-## Equipo
+## Autora
 
-- Mónica Ortiz Ossa
-- Andrés Felipe Reyes
-- Omar Rivera
+**Mónica Ortiz Ossa**
+Ingeniería de Sistemas
+Institución Universitaria Antonio José Camacho
+
 
 ## Docente
 
